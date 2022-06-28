@@ -1,4 +1,4 @@
-package com.ulinc.regex;
+package com.ulinc.regex.entity;
 
 import java.sql.Date;
 
