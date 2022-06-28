@@ -1,5 +1,6 @@
 package com.ulinc.regex.entity;
 
+import java.lang.annotation.*;
 import java.sql.Date;
 
 public class TableRecord {
@@ -7,6 +8,10 @@ public class TableRecord {
     private Date period;
     private Date create;
     private boolean activity;
+
+    @Target(value=ElementType.FIELD)
+    @Retention(value= RetentionPolicy.SOURCE)
+    public @interface Dimention{};
 
     public Date getPeriod() {
         return period;
@@ -31,4 +36,6 @@ public class TableRecord {
     public void setActivity(boolean activity) {
         this.activity = activity;
     }
+
+
 }
